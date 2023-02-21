@@ -1,0 +1,95 @@
+//MODIFICACIONES ACÁ
+
+//IMPORTAR LETRA
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+//MODIFICANDO ESTILO DE LETRA DE LA PAGINA.
+$font-family-sans-serif: "Manrope";
+
+//COLORES A UTILIZAR.
+$primary: hsl(218, 23%, 16%);
+$secondary:hsl(193, 38%, 86%);
+$white: hsl(217, 19%, 24%);
+$success: hsl(59, 100%, 66%);
+//TAMANNIOS DE LETRAS
+$h6-font-size: 12px;
+
+//ESPACIO DE LETRAS
+.letter-space{
+
+    letter-spacing: 5px;
+}
+
+//TAMANNIO DE CIRCULO
+.circle-size{
+    width: 4em;
+    height: 4em;
+}
+
+//POSICION DE BOTON
+.btnEffect{
+
+  top:88%;
+}
+
+
+//EFECTO DE BOTON
+.btnEffect:hover{
+    background: linear-gradient(90deg, hsl(150, 100%, 66%));
+    background-size: 400%;
+  }
+ .btnEffect:before{
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 50px;
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+   .btnEffect:hover:before{
+    opacity: 1;
+    z-index: -1;
+  }
+ .btnEffect:hover{
+    z-index: 1;
+    animation: glow 8s linear infinite;
+    -webkit-animation: glow 8s linear infinite;
+}
+  @keyframes glow {
+    0%{
+      background-position: 0%;
+    }
+    100%{
+      background-position: 400%;
+    }
+  }
+
+//CONFIGURACION DEL FOOTER
+body{
+  min-height: calc(100vh);
+  position:relative;
+}
+
+.footer-webpage {
+  position: absolute;
+  background-color: hsl(59, 82%, 53%);;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .letra-footer{
+   font-family: 'Roboto';
+   font-weight:400;
+ }
+
+
+
+//IMPORTACIÓN DE BOOTSTRAP
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
